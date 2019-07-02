@@ -1,7 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Amritpal Padda</h1>
+            <h2>Computer Science</h2>
+            <a href="Amritpal-Padda-Resume.pdf" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Currently enrolled in Computer Science at Concordia University in Montreal Canada. I also serve as the Electrical Systems lead for the Concordia SAE BAJA team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/2.jpg" /> </br>
+                        <img src="images/3.jpg" /> </br>
+
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>SAE Data Acquisition System</h3>
+                        <p>
+                            This ongoing project is to develop a data acquisition system for our offroad buggy. It is written in the Arduino language. A few interesting constraints and concerns with the project are as follows:
+                        <ul>
+
+                                <li> The data from the sensors must be read and saved to an IO device with as little latency as possible, hence the system must be "real-time". This was achieved by making individual "slave" devices which recieve data from sensors and forward them onto a CANBUS. A singular "master" device will then listen on the bus for data to arrive and complete the required IO operations. This ensures that the "slave" is not slowed down by the IO process and can transmit data immediately. </li>
+                                <li> The system needs to be powered by the engine's alternator, this required me to design a power delivery system which provides a constant voltage to the various devices connected to the system. The engine uses a motorcycle style Stator to convert the rotational motion of the engine to an electrical current. This system leads to the current being generated to resemble a sinusoidal wave, which is not usable by the Arduinos. To solve this, a recifier/regulator is installed between the alternator and the battery. This takes the alternating current coming from the alternator to be converted to a smoother DC voltage. Buck converters were also used to further ensure that the power being delivered to each device is constant and the correct voltage. Arduinos are fairly resistant to power fluctuations, however it is considered a best practice to use an external power regulator. </li>
+                                <li> The system must also be embedded and operate in harsh conditions, to solve this problem I designed a 3D printed case to house the various devices </li>
+
+                        </ul>
+                        <p>In the future, the scope of the system will expand to include a suspension sensor package as well as live driver feedback. The focus of the project at the moment is to get engine and gearbox data for our Electronic Transmission Captsone project which is currently under development. </p>
+                        </p>
+                        <a href="https://github.com/Amrit-Padda/Portfolio/tree/master/SAE-Data%20Acquisition">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+
+        </div>
+    </div>
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="January 2019 - Present">
+                <h3>Concordia Baja SAE</h3>
+                <h4>Electrical Systems Lead</h4>
+                <p>
+                    Developing an Arduino based CAN BUS data acquisition system for our off-road vehicle
+                    <ul>
+                    <li> Coordinated with various sub-system leads to develop a functional system, while remaining within budget and scope
+                        <ul>
+                            <li> Designed wiring diagrams and power delivery systems for the various devices</li>
+                            <li> Wrote Arduino code to incorporate various sensors and devices into one cohesive and efficient system </li>
+                        </ul>
+                    <li> Provide programming and technical support to various Capstone (final year engineering) projects, including but not limited to: </li>
+                        <ul>
+                            <li> ECVT: Advised project team on best practices for a real time, embedded control system for the electronically controlled continuously variable transmission </li>
+                            <li> Magnetorheological Dampers: Proposed project to Capstone team, and provided preliminary project scope and brainstormed early prototypes </li>
+                        </ul>
+                    </ul>
+                </p>
+            </div>
+
+            <div data-date="January 2018 – April 2018">
+                <h3>Deloitte Canada</h3>
+                <h4>Cyber Risk Analyst</h4>
+                <p>
+                    <ul>
+                        <li> Participate in the planning of Identity and Access Management projects: </li>
+                            <ul>
+                                <li> Drafting resourcing requirements and project timelines to ensure timely project delivery, as well as to present a project overview to clients </li>
+                                <li> Creating presentations to demonstrate the impact of Cyber Security initiatives and the capabilities of Deloitte’s cyber security practice </li> 
+                            </ul>
+                        <li> Collaborate with project team to draft project deliverables:</li>
+                            <ul>
+                                <li> Drafting project charters, statements of work and work orders to illustrate project progress to Deloitte clients </li>
+                                <li> Develop cyber security current state assessment reports based on client workshop sessions to identify potential vulnerabilities </li>
+                                <li> Create technical network diagrams and presentations to illustrate shortcomings and potential issues </li>
+                            </ul>
+                    </ul>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>Concordia University</h3>
+            <span class="education-date">January 2017 - December 2020</span>
+            <h4>Bachelor in Computer Science</h4>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>Coursera</h3>
+            <span class="education-date">May 2017 - September 2017</span>
+            <h4>Various Certificates</h4>
+            <ul>
+                <li>
+                   Cryptography I (Stanford University)
+                </li>
+                <li>
+                    Machine Learning (Stanford University)
+                </li>
+
+            </ul>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <!-- End #projects -->
+
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/email@email.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2017 YOUR NAME
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
+
 </html>
