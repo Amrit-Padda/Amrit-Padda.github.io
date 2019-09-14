@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Amritpal Padda</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -91,15 +91,15 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>SAE Data Acquisition System</h3>
+                        <h3>SAE Data Acquisition System </h3>
                         <p>
                             This ongoing project is to develop a data acquisition system for our offroad vehicle. It is written in the Arduino language. A few interesting constraints and concerns with the project are as follows:
                         </p>
                         <ul>
 
-                                <li> The data from the sensors must be read and saved to an IO device with as little latency as possible, hence the system must be "real-time". This was achieved by making individual "slave" devices which recieve data from sensors and forward them onto a CANBUS. A singular "master" device will then listen on the bus for data to arrive and complete the required IO operations. This ensures that the "slave" is not slowed down by the IO process and can transmit data immediately. </li>
-                                <li> The system needs to be powered by the engine's alternator, this required me to design a power delivery system which provides a constant voltage to the various devices connected to the system. The engine uses a motorcycle style Stator to convert the rotational motion of the engine to an electrical current. This system leads to the current being generated to resemble a sinusoidal wave, which is not usable by the Arduinos. To solve this, a recifier/regulator is installed between the alternator and the battery. This takes the alternating current coming from the alternator to be converted to a smoother DC voltage. Buck converters were also used to further ensure that the power being delivered to each device is constant and the correct voltage. Arduinos are fairly resistant to power fluctuations, however it is considered a best practice to use an external power regulator. </li>
-                                <li> The system must also be embedded and operate in harsh conditions, to solve this problem I designed a 3D printed case to house the various devices </li>
+                            <li> The data from the sensors must be read and saved to an IO device with as little latency as possible, hence the system must be "real-time". This was achieved by making individual "slave" devices which recieve data from sensors and forward them onto a CANBUS. A singular "master" device will then listen on the bus for data to arrive and complete the required IO operations. This ensures that the "slave" is not slowed down by the IO process and can transmit data immediately. </li>
+                            <li> The system needs to be powered by the engine's alternator, this required me to design a power delivery system which provides a constant voltage to the various devices connected to the system. The engine uses a motorcycle style Stator to convert the rotational motion of the engine to an electrical current. This system leads to the current being generated to resemble a sinusoidal wave, which is not usable by the Arduinos. To solve this, a recifier/regulator is installed between the alternator and the battery. This takes the alternating current coming from the alternator to be converted to a smoother DC voltage. Buck converters were also used to further ensure that the power being delivered to each device is constant and the correct voltage. Arduinos are fairly resistant to power fluctuations, however it is considered a best practice to use an external power regulator. </li>
+                            <li> The system must also be embedded and operate in harsh conditions, to solve this problem I designed a 3D printed case to house the various devices </li>
 
                         </ul>
                         <p>In the future, the scope of the system will expand to include a suspension sensor package as well as live driver feedback. The focus of the project at the moment is to get engine and gearbox data for our Electronic Transmission Captsone project which is currently under development. </p>
@@ -111,22 +111,61 @@
                 <!-- End .project -->
             </div>
         </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/drive-1.jpg" width = "300"/> </br>
+                        <img src="images/drive-2.jpg" width = "300" /> </br>
+
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>SAE Database</h3>
+                        <p>
+                            This ongoing project is to develop a database to store results from both testing and competitions. During a testing session the team will log laptimes and various vehicle setup changes, this data is currently stored on an ad-hoc basis in either notebooks or in an excel spreadsheet. This product will provide the team with an easy to use website to input laptimes and setup changes, creating a comprehensive database of testing data
+                        </p>
+                        <p>In the future, the scope of the system will expand to include live data visualization and api hooks to allow for direct data input by the vehicle's onboard data acquisition system.  </p>
+
+                        <a href="https://github.com/Amrit-Padda/BAJA-Data-DB">View Project</a>
+                    </div>
+
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
     </div>
 
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
+            <div data-date="September 2019 - Present">
+                <h3>CAE</h3>
+                <h4>Software Developer Intern</h4>
+                <p>
+                    <ul>
+                        <li> Developed web scraping script to generate and visualize dependency graphs for internal software </li>
+                        <li> Ported internal software and tools from Visual Studio 2012 to Visual Studio 2017</li>
+                    </ul>
+                </p>
+            </div>
             <div data-date="January 2019 - Present">
                 <h3>Concordia Baja SAE</h3>
-                <h4>Electrical Systems Lead</h4>
+                <h4>Electrical Systems and Data Acquisition Lead at Concordia Baja SAE</h4>
                 <p>
-                    Developing an Arduino based CAN BUS data acquisition system for our off-road vehicle
-                    <ul>
-                    <li> Coordinated with various sub-system leads to develop a functional system, while remaining within budget and scope
+                <ul>
+                    <li> Develop an STM32 based CAN BUS data acquisition system for our off-road vehicle </li>
+                        <ul><li> Led efforts on hardware design and software design as well as lead all implementation and installation </li></ul>
+                    <li> Develop a database solution to store and visualize testing and engineering data</li>
                         <ul>
-                            <li> Designed wiring diagrams and power delivery systems for the various devices</li>
-                            <li> Wrote Arduino code to incorporate various sensors and devices into one cohesive and efficient system </li>
+                            <li>Project fulfilled in a management role. </li>
+                            <li>Collaborated with engineering team to determine requirements and use cases </li>
+                            <li>Assembled and recruited development team </li>
+                            <li>Currently leading the solution onboarding and integration phase of project </li>
                         </ul>
+
                     <li> Provide programming and technical support to various Capstone (final year engineering) projects, including but not limited to: </li>
                         <ul>
                             <li> ECVT: Advised project team on best practices for a real time, embedded control system for the electronically controlled continuously variable transmission </li>
